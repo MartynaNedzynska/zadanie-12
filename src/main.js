@@ -1,46 +1,48 @@
 import './style.css'
 import { setupCounter } from './counter.js'
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" " class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="./javascript.svg" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button" class="bg-blue-300 p-4"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-    <section>
-      <h2>Lista artykułów</h2>
-      <select id="sortOrder">
-        <option value="created_at.asc">Po dacie rosnąco</option>
-        <option value="created_at.desc">Po dacie malejąco</option>
-        <option value="title.asc">Po tytule A-Z</option>
-      </select>
-      <div id="articles"></div>
-    </section>
-
-    <section>
-      <h2>Dodaj nowy artykuł</h2>
-      <form id="articleForm">
-        <input name="title" placeholder="Tytuł" required><br>
-        <input name="subtitle" placeholder="Podtytuł" required><br>
-        <input name="author" placeholder="Autor" required><br>
-        <textarea name="content" placeholder="Treść" required></textarea><br>
-        <input type="date" name="created_at" required><br>
-        <button type="submit">Dodaj artykuł</button>
-      </form>
-    </section>
-  </div>
-
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#app').innerHTML = `
+    <div>
+      <a href="https://vite.dev" target="_blank">
+        <img src="/vite.svg" " class="logo" alt="Vite logo" />
+      </a>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+        <img src="./javascript.svg" class="logo vanilla" alt="JavaScript logo" />
+      </a>
+      <h1>Hello Vite!</h1>
+      <div class="card">
+        <button id="counter" type="button" class="bg-blue-300 p-4"></button>
+      </div>
+      <p class="read-the-docs">
+        Click on the Vite logo to learn more
+      </p>
+      <section>
+        <h2>Lista artykułów</h2>
+        <select id="sortOrder">
+          <option value="created_at.asc">Po dacie rosnąco</option>
+          <option value="created_at.desc">Po dacie malejąco</option>
+          <option value="title.asc">Po tytule A-Z</option>
+        </select>
+        <div id="articles"></div>
+      </section>
   
-`
+      <section>
+        <h2>Dodaj nowy artykuł</h2>
+        <form id="articleForm">
+          <input name="title" placeholder="Tytuł" required><br>
+          <input name="subtitle" placeholder="Podtytuł" required><br>
+          <input name="author" placeholder="Autor" required><br>
+          <textarea name="content" placeholder="Treść" required></textarea><br>
+          <input type="date" name="created_at" required><br>
+          <button type="submit">Dodaj artykuł</button>
+        </form>
+      </section>
+    </div>
+  
+    
+  `;
+});
 
 setupCounter(document.querySelector('#counter'))
 const SUPABASE_URL = 'https://kipkplviqflklgdjoxyg.supabase.co';
