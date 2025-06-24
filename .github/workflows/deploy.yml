@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build -- --base=/technologie-webowe/
+        run: npm run build -- --base=/zadanie-12/
 
       - name: Deploy to GitHub Pages 
         uses: peaceiris/actions-gh-pages@v4
