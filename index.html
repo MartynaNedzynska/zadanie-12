@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moja strona</title>
+  </head>
+  <body class="p-6">
+    <div id="app"></div> 
+    <script type="module" src="/src/main.js"></script> 
+    <h1 class="text-2xl font-bold text-primary">Technologie webowe</h1>
+  <section>
+    <h2>Lista artykułów</h2>
+
+    <select id="sortOrder">
+      <option value="created_at.asc">Po dacie rosnąco</option>
+       <option value="created_at.desc">Po dacie malejąco</option>
+      <option value="title.asc">Po tytule A-Z</option>
+    </select>
+
+     <div id="articles"></div>
+  </section>
+
+  <section>
+    <h2>Dodaj nowy artykuł</h2>
+    <form id="articleForm">
+      <input name="title" placeholder="Tytuł" required><br>
+      <input name="subtitle" placeholder="Podtytuł" required><br>
+      <input name="author" placeholder="Autor" required><br>
+      <textarea name="content" placeholder="Treść" required></textarea><br>
+      <input type="date" name="created_at" required><br>
+      <button type="submit">Dodaj artykuł</button>
+    </form>
+  </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
