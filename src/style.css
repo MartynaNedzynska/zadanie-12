@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 @theme {
   --primary: oklch(0.79 0.22 345);
 }  
